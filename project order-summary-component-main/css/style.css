@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+/* font-family: 'Red Hat Display', sans-serif; */
+/* ### Primary 
+- Pale blue: hsl(225, 100%, 94%) 
+- Bright blue: hsl(245, 75%, 52%) 
+### Neutral 
+- Very pale blue: hsl(225, 100%, 98%) 
+- Desaturated blue: hsl(224, 23%, 55%) 
+- Dark blue: hsl(223, 47%, 23%) */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body{
+    background: hsl(225, 100%, 96%) url('../images/pattern-background-desktop.svg') no-repeat top;
+    background-size: 100% 50%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box{
+    width: 450px;
+    height: auto;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 15px;
+}
+
+.box img{
+    border-radius: 20px 20px 0 0;
+}
+
+.box h2{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+}
+
+.box p{
+    text-align: center;
+    padding: 0 80px;
+    font-size: 15px;
+    color: hsl(224, 23%, 55%);
+}
+
+.payment{
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(225, 100%, 96%);
+    margin: 30px 60px;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+
+.payment li{
+    list-style: none;
+    margin-right: 60px;
+    font-size: 15px;
+}
+
+.payment li:first-child{
+    margin-bottom: 10px;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+.payment li:last-child{
+    color: hsl(224, 23%, 55%);
+}
+
+.payment a{
+    margin: auto 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+}
+
+.payment a:active{
+    color: hsl(245, 75%, 65%);
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin: 20px 60px;
+}
+
+.button button{
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(245, 75%, 52%);
+    color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 15px;
+    cursor: pointer;
+}
+
+.button button:active{
+    color: hsl(245, 75%, 65%);
+}
+
+.button a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.cancel{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cancel a{
+    text-decoration: none;
+    color: hsl(224, 23%, 55%);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.cancel a:active{
+    color: hsl(223, 47%, 23%);
+}
