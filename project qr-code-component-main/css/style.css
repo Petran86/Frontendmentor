@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(212, 45%, 89%);
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 375px;
+    height: auto;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+img{
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px 0 10px 20px;
+}
+
+h2,
+p{
+    text-align: center;
+    margin: 20px;
+}
+
+h2{
+    font-size: 18px;
+    padding: 10px;
+}
+
+p{
+    font-size: 15px;
+    padding: 10px 30px;
+}

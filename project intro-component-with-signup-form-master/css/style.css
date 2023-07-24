@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root{
+    --primary-red: hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+    --neutral-dblue: hsl(249, 10%, 26%);
+    --neutral-gblue: hsl(246, 25%, 77%);
+    --accent: hsl(248, 32%, 49%);
+}
+
+/* mobile styles start */
+body{
+  background: url(../images/bg-intro-mobile.png) var(--primary-red) no-repeat center;
+}
+
+main{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin-top: 5rem;
+  padding: 0 2rem;
+}
+
+article h1{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+article p{
+  margin-bottom: 3rem;
+}
+
+.border{
+  background-color: var(--accent);
+  border-radius: 10px;
+  padding: 1rem 3rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 10px hsla(249, 10%, 26%, 0.404);
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.form{
+  margin-bottom: 3rem;
+}
+
+.form form{
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0px 10px hsla(249, 10%, 26%, 0.404);
+  position: relative;
+}
+
+.form form input{
+  width: 100%;
+  font-family: inherit;
+  color: var(--neutral-dblue);
+  font-weight: 600;
+  padding: 1rem 0 1rem 2rem;
+  border: 1px solid var(--neutral-gblue);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.form form input::placeholder{
+  font-family: inherit;
+  color: var(--neutral-dblue);
+  font-weight: 500;
+}
+
+.form form input:active, .form form input:focus{
+  outline: none;
+  border: 1px solid var(--accent);
+}
+
+.error-img{
+  display: none;
+  position: absolute;
+  right: 0;
+  transform: translate(-240%, -230%);
+}
+
+.error-msg{
+  display: none;
+  color: var(--primary-red);
+  text-align: right;
+  font-size: .8rem;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+#submit-btn{
+  width: 100%;
+  background-color: var(--primary-green);
+  color: white;
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 1rem 0;
+  box-shadow: 0 3px hsl(154, 83%, 35%);
+  margin-bottom: 1rem;
+}
+
+#submit-btn:hover{
+  background-color: hsl(155, 75%, 76%);
+}
+
+form p{
+  color: var(--neutral-gblue);
+  font-size: 0.8rem;
+}
+
+form p a{
+  text-decoration: none;
+  color: var(--primary-red);
+  font-weight: 600;
+}
+/* mobile styles end */
+
+/* desktop styles start */
+@media (min-width: 1000px){
+  body{
+    background: url(../images/bg-intro-desktop.png) var(--primary-red);
+  }
+
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6rem;
+  }
+
+  article, .form{
+    flex: 1;
+  }
+
+  article{
+    text-align: left;
+    padding: 0 4rem;
+  }
+
+  article h1{
+    font-size: 3rem;
+  }
+}
+/* desktop styles end */

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+    --Very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+
+    --ff-normal-400: 'Lexend Deca', sans-serif;
+    --ff-bold-700: 'Big Shoulders Display', cursive;
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+/* html,
+body {
+    height: 100%;
+} */
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+body{
+    font-family: var(--ff-normal-400);
+    font-weight: var(--fw-normal);
+    font-size: 0.875rem;
+    background-color: var(--Very-light-gray);
+    color: var(--Transparent-white);
+
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+.card{
+    --card-padding: 3rem;
+    --card-spacing: 1.5rem;
+
+    max-width: 600px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: grid;
+}
+
+.card h2{
+    font-family: var(--ff-bold-700);
+    font-weight: var(--fw-bold);
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--Very-light-gray);
+}
+
+.card__sedans{
+    background-color: var(--Bright-orange);
+    padding: var(--card-padding);
+    display: grid;
+    gap: var(--card-spacing);
+}
+
+.card__suvs{
+    background-color: var(--Dark-cyan);
+    padding: var(--card-padding);
+    display: grid;
+    gap: var(--card-spacing);
+}
+
+.card__luxury{
+    background-color: var(--Very-dark-cyan);
+    padding: var(--card-padding);
+    display: grid;
+    gap: var(--card-spacing);
+}
+
+button {
+  width: 60%;
+  border-radius: 1rem;
+  border: 0;
+  padding: 0.7rem;
+  cursor: pointer;
+}
+
+.button-sedans{
+  color: var(--Bright-orange);
+}
+
+.button-sedans:is(:hover, :focus) {
+  color: var(--Very-light-gray);
+  background-color: var(--Bright-orange);
+  /* border: 2px solid var(--Very-light-gray); */
+  outline: 2px solid var(--Very-light-gray);
+}
+
+.button-suvs{
+  color: var(--Dark-cyan);
+}
+
+.button-suvs:is(:hover, :focus) {
+  color: var(--Very-light-gray);
+  background-color: var(--Dark-cyan);
+  /* border: 2px solid var(--Very-light-gray); */
+  outline: 2px solid var(--Very-light-gray);
+}
+
+.button-luxury{
+  color: var(--Very-dark-cyan);
+}
+
+.button-luxury:is(:hover, :focus) {
+  color: var(--Very-light-gray);
+  background-color: var(--Very-dark-cyan);
+  /* border: 2px solid var(--Very-light-gray); */
+  outline: 2px solid var(--Very-light-gray);
+}
+
+@media (min-width: 700px){
+  html,
+  body {
+    height: 100%;
+    }
+
+  .card{
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1000px;
+  }
+
+  button{
+    margin-top: 3rem;
+  }
+}
